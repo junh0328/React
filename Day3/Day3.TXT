@@ -1,0 +1,64 @@
+npm init -y
+
+npx create-react-app react1
+
+useEffect
+컴포넌트가 마운트 됐을 때(처음 나타났을 때), 언마운트 됐을 때(사라졌을 때), 업데이트 됐을 때(특정 프롭스가 바뀔 때) 특정 작업을 처리하는 방법을 제공합니다.
+
+<script>
+ func1( );
+
+      function func1( ) {	//함수 선언식
+        console.log('안녕하세요!');
+      }
+</script>
+
+<script>
+      const func2 = function( ) {		//함수 표현식
+        console.log('안녕하세요!');
+      }
+
+ func2( );
+</script>
+
+* Hook 함수
+클래스 형 컴포넌트에서 사용하던 상태값 또는 생명주기를 함수형 컴포넌트에서 사용할 수 있도록 제공되는 함수를 Hook이라고 합니다.
+
+import React, { useEffect } from 'react'
+
+●● useEffect(함수, 의존 값이 들어있는 배열)
+* 의존 값이 들어있는 배열이 비워있다면, 컴포넌트가 처음 나타날때에만 useEffect에 등록한 함수가 호출됩니다.
+useEffect에서는 함수를 반환하는데, 이를 cleanup 함수라고 부릅니다.
+
+*cleanup
+useEffect에 대한 뒷처리를 해주는 함수입니다. deps가 비워져 있는 경우 컴포넌트가 사라질 때, cleanup 함수가 호출됩니다.
+
+* 주로 마운트시에 하는 작업
+- 외부 API 요청
+- 라이브러리 사용
+- setInterval을 통한 반복작업 또는 setTimeout을 통한 작업 예약
+- props로 전달 받은 값을 컴포넌트에 상태로 설정
+
+* 주로 언마운트시에 하는 작업
+- setInterval, setTimeout을 사용하여 등록한 작업을 clear 하는 작업 
+- 라이브러리 인스턴스 제거
+
+* 주로 업데이트시에 하는 작업
+
+* useEffect 사용하는 상태나, props가 있다면, useEffect의 deps(=배열)에 넣어줘야 합니다. 만약 useEffect 안에서 사용하는 상태나 props를 deps에 넣지 않는다면, useEffect에 등록한 함수가 실행될 때, 최신의 props 상태를 가르키지 않게 됩니다.
+
+* 리액트 컴포넌트는 기본적으로 부모 컴포넌트가 리렌더링되면, 자식 컴포넌트 또한 리렌더링이 됩니다.
+
+●● useMemo를 사용한 연산 값 재사용
+
+useMemo(연산을 정의한 함수(deps))
+
+useReducer를 사용하여 상태 업데이트 로직 분리하기
+
+function reducer(state, action){
+	// 새로운 상태를 만드는 로직
+	const nextState = ...
+	return nextState;
+}
+
+

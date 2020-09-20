@@ -1,0 +1,57 @@
+작업환경 준비
+
+1. Node.js
+https://nodejs.org/
+
+npm init -y
+
+2. npm
+
+새 프로젝트 만들기
+npx create-react-app react1
+
+컴퍼넌트
+컴퍼넌트란 리액트에서 레고 조각처럼 조합하여 프로그래밍 할 수 있게 만든 모듈단위입니다.
+
+index.js
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+ReactDOM.render
+브라우저에 있는 실제 DOM 내부에 리액트 컴포넌트를 렌더링하겠다는 것을 의미합니다. "index.html" 파일의 id가 root인 DOM을 선택해서 그 결과를 div 내부에 랜더링시킨다는 것입니다.
+
+https://babeljs.io/
+
+JSX(http://facebook.github.io/jsx/)
+리액트와 마찬가지로 페이스북에서 개발한 확장 구문입니다. 리액트에서는 UI를 화면에 나타내는 파일을 만들어가는 것이므로 HTML을 표현하려면 DOM을 구축해야 합니다. JavaScript나 리액트가 제공하는 표준 API로 개발하면 코드양이 많아질 수 있어서 JSX를 이용하여 개발자가 쉽게 코드를 기술할 수 있도록 접근하는 방법을 제시합니다.
+
+- 태그는 꼭 닫혀야합니다.
+- 두개 이상의 태그는 무조건 하나의 태그로 감싸져야합니다.
+- CSS속성은 스네이크표기법 -> 낙타표기법
+(background-color -> backgroundColor)
+- 주석은 {/* */} 표현합니다.
+
+
+props
+컴포넌트의 props는 properties의 줄임말입니다. 어떤한 값을 컴포넌트에게 전달해줘야 할 때 사용하는 매개변수로 쓰이는 키워드입니다.
+- 객체 형태로 전달됩니다.
+- 함수의 파라미터에서 비구조화 할당 문법을 사용하면 코드를 단순화 시킬 수 있습니다.
+
+defaultProps
+- 컴포넌트에 props를 지정하지 않았을 때 기본적으로 사용할 값을 설정하고 싶다면 컴포넌트에 defaultProps 값을 설정하면 됩니다.
+
+props.children
+컴포넌트 태그 사이에 넣은 값을 조회하고 싶을 때 사용합니다.
+
+조건부 렌더링
+특정 조건에 따라 다른 결과물을 렌더링 하는 것을 의미합니다.
+
+useState
+리액트 16.8에서 Hooks라는 기능이 도입되면서 함수형 컴포넌트에서도 상태를 관리할 수 있게 되었습니다. 리액트의 Hooks 중 하나인 useState 함수를 통해 상태변화를 체크할 수 있습니다. 
+
+

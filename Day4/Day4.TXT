@@ -1,0 +1,47 @@
+●●리액트 컴포넌트 스타일
+
+1. Sass, Scss
+Sass는 CSS pre-processor로서 복잡한 작업을 쉽게 할 수 있게 해주고, 코드의 재활용성을 높여줄 뿐 만 아니라, 코드의 가독성을 높여주어 유지 보수를 쉽게 해줍니다.
+
+https://sass-lang.com/guide
+
+*node-sass 설치
+Sass를 CSS로 변환해주는 라이브러리
+npm install node-sass
+
+* className을 조건부로 사용하고 싶을 때 편한 라이브러리
+npm install classnames
+
+* classNames( ) 함수를 호출
+classNames( 'class1', 'class2'); // => "class1 class2" 로 바뀌어서 알아서 만들어준다.
+classNames( 'class1', { class2: true }); => "class1 class2"
+classNames( 'class1', { class2: false }); => "class1"
+classNames({class1: false,  class2: false }); => ""
+
+
+2. CSS Module
+CSS Module을 사용하면 CSS 클래스가 중첩되는 문제를 완벽히 방지할 수 있습니다. CRA로 만든 프로젝트에서 CSS 모듈을 사용할 때는, CSS 파일의 확장자를 .module.css 로 합니다.
+
+Box.module.css
+
+.Box {
+	background: black;
+	color: white;
+}
+
+* 리액트 컴포넌트 파일에서 해당 CSS 파일을 불러올 때 CSS 파일에 선언한 클래스 이름들이 모두 고유해집니다. 고유 CSS 클래스 이름이 만들어지는 과정에서는 파일 경로, 파일 이름, 클래스 이름, 해쉬값 등이 사용될 수 있습니다.
+
+장점
+- 레거시 프로젝트에 리액트를 도입할 때 (*레거시 프로젝트: 기존에 있던 프로젝트에 리액트 기술을 도입할 때)
+- CSS클래스를 중복되지 않게 작성하기 위해 CSS 클래스 네이밍 규칙을 따로 작성하기 귀찮을 때
+
+리액트 아이콘
+https://react-icons.github.io/react-icons/#/
+
+npm install react-icons
+
+
+3. styled-components
+JS안에 CSS를 작성하는 것을 의미합니다.
+
+
