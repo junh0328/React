@@ -9,14 +9,14 @@ class Counter2 extends Component {
     handleDecrease = () => {
         console.log('decrease 호출');
     }
-    
+
     render() {
         return (
-        <div>
-            <h2>0</h2>
-            <button onClick={this.handleIncrease}>1더하기</button>
-            <button onClick={this.handleDecrease}>1빼기</button>
-        </div>  
+            <div>
+                <h2>0</h2>
+                <button onClick={this.handleIncrease}>1더하기</button>
+                <button onClick={this.handleDecrease}>1빼기</button>
+            </div>
         );
     }
 }
