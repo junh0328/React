@@ -5,6 +5,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { useTodoState } from '../TodoContext';
 
 const TodoHeadBlock = styled.div`
     padding-top: 48px;
@@ -32,11 +33,15 @@ const TodoHeadBlock = styled.div`
 `;
 
 function TodoHead(){
+    const todos = useTodoState();
+    // console.log(todos); array: [ 0: 일찍 일어나기 , 1: .... ]
+    const undoneTasks = todos.filter(todo => !todo.done);
+    // todos 중 done 이 아닌 것만 undoneTasks의 변수로 들어간다.
     return (
         <TodoHeadBlock>
             <h1>2020년 9월 26일</h1>
             <div className="day">토요일</div>
-            <div className="tasks-left">할 일 2개 남음</div>
+        <div className="tasks-left">할 일 {undoneTasks.length}개 남음</div>
         </TodoHeadBlock>
     )
 }
