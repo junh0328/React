@@ -12,4 +12,4 @@ css를 모든 컴포넌트(전역)에서 조회해서 사용할 수 있도록 �
 styled-component 사용한 투두리스트 만들기
 
 npx create-react-app react_project
-npm install react-icons styled=components
+npm install react-icons styled-components
