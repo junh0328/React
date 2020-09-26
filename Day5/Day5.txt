@@ -1,0 +1,15 @@
+styled-component 사용
+
+npm install styled-components
+
+themeprovider
+https://styled-components.com/docs/api#themeprovider
+
+css를 모든 컴포넌트(전역)에서 조회해서 사용할 수 있도록 만드는 기능
+
+테마 프로바이더로 감싸져있는 부분은 테마 프로바이더에서 선언한 객체들을 쓸 수 있게된다.
+
+styled-component 사용한 투두리스트 만들기
+
+npx create-react-app react_project
+npm install react-icons styled=components
