@@ -44,7 +44,7 @@ function todoReducer(state, action){
             return state.filter(todo => todo.id !== action.id);
         default:
             throw new Error(`${action.type}`);
-    }   
+    };   
 }
 
 const TodoStateContext = createContext();       // 값 전달
