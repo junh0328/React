@@ -13,3 +13,7 @@ styled-component 사용한 투두리스트 만들기
 
 npx create-react-app react_project
 npm install react-icons styled-components
+
+Component Selector
+TodoItemBlock 위에 커서가 있을 경우 Remove 컴포넌트를 보여주라는 의미로 사용
+https://styled-components.com/docs/advanced#referring-to-other-components
