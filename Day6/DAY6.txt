@@ -50,4 +50,9 @@ npm i react-router-dom
 파라미터 : /about/apple >>apple [apple]이라는 값은 url을 통해 받아오는 파라미터이다.
 쿼리 : /about/?userid=apple  쿼리는 userid=apple과 같이 키와 값을 보내 받아오는 방법이다.
 
- 
+쿼리스트링 라이브러리 다운
+npm install qs
+문자열 형태의 쿼리를 객체형태로 변환하는 역할
+
+서브라우트
+라우트 내부의 라우트를 만드는 것을 의미합니다. 컴포넌트를 만들어 그 안에 또 Router 컴포넌트를 렌더링합니다.
