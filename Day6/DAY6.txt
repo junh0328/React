@@ -1,0 +1,15 @@
+axios 설치
+
+npm install axis
+
+Get : 데이터 조회
+POST : 데이터 등록
+PUT : 데이터 수정
+DELETE : 데이터 제거
+
+JSON Placeholder
+https://jsonplaceholder.typicode.com/
+
+예제
+https://jsonplaceholder.typicode.com/users/1
+
